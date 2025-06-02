@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesOpenModel.css">
+    <title>Форма входа/регистрации</title>
+</head>
+<body id = "body-form">
+
+<div id ="inp_form" class = "form-container">
+    <h1>Вход</h1>
+    <form id ="input" >
+        <label class="text-field__label" for="name_user" >Имя:</label>
+        <input class="text-field__input"  type="text" id="name_user" name="name_user"  required>
+        <label class="text-field__label" for="pass">Password:</label>
+        <input class="text-field__input" type="password" id="pass" name="password" minlength="2"  required/>
+        <a id="reg" >Регистрация</a>
+        <button class = "button_container"  type="submit" >Отправить</button>
+        <button class="button_return" onclick = "goBack()">Закрыть</button>
+        <div id ="error"></div>
+    </form>
+</div>
+
+<div id = "reg_form" class = "form-container form-container1">
+    <h1>Регистрация</h1>
+    <p id ="error1"></p>
+    <form id = "registration" action = "http://localhost:3000/reg" method="POST">
+        <label class="text-field__label" for="username" >Имя:</label>
+        <input class="text-field__input"  type="text" id="username" name="username"  required>
+
+        <label class="text-field__label" for="email">Email:</label>
+        <input class="text-field__input" type="email" id="email" name="email"  required>
+
+        <label class="text-field__label" for="phone">Введите номер телефона:</label>
+        <input class="text-field__input" type="tel" id="phone" name="phone"  required>
+
+        <label class="text-field__label" for="password">Password (8 characters minimum):</label>
+        <input class="text-field__input" type="password" id="password" name="password" minlength="2"  required/>
+        <a id="inp" >Вход</a>
+        <button class = "button_container" type = "submit"  >Отправить</button>
+        <button class="button_return" onclick = "goBack()">Закрыть</button>
+    </form>
+</div>
+
+<script src="/client/js/inpReg.js"></script>
+</body>
+</html>

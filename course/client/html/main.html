@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/c.css">
+    <link rel="stylesheet" href="css/product_catalog.css">
+   
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <p>
+        <a id="delivery" href = "delivery.html"  style="position: absolute; right:650px; top:22px">Доставка</a>
+        <a id = "pay" href = "payment.html"  style="position: absolute; right:850px; top:22px">Оплата</a>
+        <a id= "inpreg" href = "regInp.html" style="position: absolute; right:60px; top:22px"><img src = "/client/src/2.png" alt = "">Вход/Регистрация</a>
+    </p>
+    <h1><span>Mobile</span><span>Store</span></h1>
+    <p>
+        <a id = "bask" href = "basket.html"  style="position: absolute; right:160px; top:65px; "><img src = "/client/src/1.png" alt = "" >Корзина</a>
+    </p>
+    <nav role="navigation">
+        <a href="main.html">Каталог</a>
+    </nav>
+</header>
+<aside>
+    <div id = "filter">
+        <h2>Фильтры</h2>
+        <div class="filter-group">
+            <h3>Брэнд</h3>
+            <select id="category-filter">
+                <option value=""></option>
+                <option value="APPLE">Apple</option>
+                <option value="HONOR">Honor</option>
+                <option value="HUAWEI">Huawei</option>
+                <option value="INFINIX">Infinix</option>
+                <option value="TECNO">Tecno</option>
+                <option value="SAMSUNG">Samsung</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <h3>Оперативная память ГБ</h3>
+            <select id="ram">
+                <option value=""></option>
+                <option value="4">4</option>
+                <option value="6">6</option>
+                <option value="8">8</option>
+                <option value="12">12</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <h3>Встроенная память ГБ</h3>
+            <select id="rom">
+                <option value=""></option>
+                <option value="64">64</option>
+                <option value="128">128</option>
+                <option value="256">256</option>
+                <option value="512">512</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <h3>Цена</h3>
+            <input type="number" id="min-price-filter" placeholder="Мин. цена">
+            <input type="number" id="max-price-filter" placeholder="Макс. цена">
+        </div>
+        <button id="apply-filters">Применить фильтры</button>
+        <button id="delete-filters" onclick="location.reload()">Очистить фильтры</button>
+    </div>
+</aside>
+<div id = "item">
+</div>
+<main>
+    <div id ="grid" class="product-grid"></div>
+    <script src="/client/js/product_catalog.js"></script>
+</main>
+
+
+</body>
+</html>
+
