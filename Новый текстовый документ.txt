@@ -1,0 +1,9 @@
+СУБД PostgreSQL
+Название бд: users_data
+Пользователь: postgres
+Порт: 5432
+Пароль:
+
+Установить зависимостей:
+npm init -y
+npm install express bcrypt jsonwebtoken pg body-parser cors dotenv
